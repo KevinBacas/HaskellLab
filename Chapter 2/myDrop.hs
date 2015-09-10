@@ -6,4 +6,5 @@
 --         n = n - 1
 --         elts = elts[1:]
 --     return elts
-myDropX n xs = if n <= 0 || null xs then xs else myDropX (n - 1) (tail xs)
+myDrop :: Int -> [a] -> [a]
+myDrop n xs = if n <= 0 || null xs then xs else myDrop (n - 1) (tail xs)
